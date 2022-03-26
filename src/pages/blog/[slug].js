@@ -12,7 +12,6 @@ export default function BlogPost() {
   useEffect(() => {
     if (slug) {
       Storyblok.get(`cdn/stories/posts/${slug}`).then((res) => {
-        console.log('🚀 ~ res', res.data.story);
         setPost(res.data.story)
       });
     }

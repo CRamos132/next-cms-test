@@ -12,7 +12,6 @@ export default function Home() {
     Storyblok.get('cdn/stories', {
       starts_with: 'posts/'
     }).then((res) => {
-      console.log('🚀 ~ res', res.data.stories);
       setStories(res.data.stories)
     });
   }, [])
